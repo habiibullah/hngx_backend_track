@@ -3,9 +3,9 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-@app.route('/get_info', methods=['GET'])
+@app.route('/api', methods=['GET'])
 
-def get_info():
+def api():
 
     slack_name = 'Ajiboye Habiibullah'
     track = 'Backend'
