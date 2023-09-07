@@ -13,8 +13,8 @@ def api():
     if not slack_name or not track:
         return jsonify({'error': 'Both slack_name and track are required'})
 
-    # Get the current UTC time accurate within a +/-2 minute window and format it
-    current_utc_time = (datetime.utcnow() + timedelta(minutes=2)).strftime('%Y-%m-%dT%H:%M:%SZ')
+    #Get the current UTC time accurate within a +/-2 minute window and format it
+    current_utc_time = (datetime.utcnow() + timedelta(hours=0)).strftime('%Y-%m-%dT%H:%M:%SZ')
 
     # Get the current day of the week in full
     current_day = datetime.utcnow().strftime('%A')
